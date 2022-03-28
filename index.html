@@ -18,8 +18,8 @@
   <h3>Authors: </h3>
   Xiaoxiao Miao, Xin Wang, Erica Cooper, Junichi Yamagishi, N. Tomashenko
   <h3>Abstract: </h3>
-  In our previous work, we proposed a language-independent speaker anonymization system based on self-supervised learning models that disentangles speech into the fundamental frequency, content, and speaker identity representation. Although the system can anonymize speech data of any language, the anonymization was imperfect, and the speech content of the anonymized speech was damaged. This limitation is more severe when the input speech is from a language unseen in the training data.
-This study analyzed the bottleneck of the anonymization system under unseen conditions. It was found that the language/channel mismatch between the training and test data affected the neural waveform vocoder and anonymized speaker vectors and limited the performance of the whole system. Increasing the training data diversity for the vocoder was found to be helpful to reduce its implicit language/channel dependency. Furthermore, a simple CORrelation ALignment (CORAL)-based domain adaption strategy was found to be effective to alleviate the mismatch on the anonymized speaker vectors.
+  In our previous work, we proposed a language-independent speaker anonymization system based on self-supervised learning models. Although the system can anonymize speech data of any language, the anonymization was imperfect, and the speech content of the anonymized speech was distorted. This limitation is more severe when the input speech is from a domain unseen in the training data.
+This study analyzed the bottleneck of the anonymization system under unseen conditions. It was found that the domain (e.g., language and channel) mismatch between the training and test data affected the neural waveform vocoder and anonymized speaker vectors, which limited the performance of the whole system. Increasing the training data diversity for the vocoder was found to be helpful to reduce its implicit language and channel dependency. Furthermore, a simple correlation-alignment-based domain adaption strategy was found to be significantly effective to alleviate the mismatch on the anonymized speaker vectors.
   <p>&nbsp;</p>
   <hr>
   <p>&nbsp;</p>
@@ -60,7 +60,7 @@ This study analyzed the bottleneck of the anonymization system under unseen cond
     </tr>
     <tr>
       <td>
-        <div align="center">Momolingual HiFi-GAN w/o CORAL</div>
+        <div align="center">Monolingual HiFi-GAN w/o CORAL</div>
       </td>
       <td width="149">
         <audio src="wavs-is2022/SSB06930010_gen_libri_mono.wav" controls="controls">
@@ -74,7 +74,7 @@ This study analyzed the bottleneck of the anonymization system under unseen cond
     </tr>
     <tr>
       <td>
-        <div align="center">Momolingual HiFi-GAN w/ General-CORAL-10</div>
+        <div align="center">Monolingual HiFi-GAN w/ General-CORAL-10</div>
       </td>
       <td width="149">
         <audio src="wavs-is2022/SSB06930010_gen_mls_10_mono.wav" controls="controls">
@@ -87,7 +87,7 @@ This study analyzed the bottleneck of the anonymization system under unseen cond
     </tr>
     <tr>
       <td>
-        <div align="center">Momolingual HiFi-GAN w/ Mandarin-CORAL-10</div>
+        <div align="center">Monolingual HiFi-GAN w/ Mandarin-CORAL-10</div>
       </td>
       <td width="149">
         <audio src="wavs-is2022/SSB06930010_gen_mand_10_mono.wav" controls="controls">
